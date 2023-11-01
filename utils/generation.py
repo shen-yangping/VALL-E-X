@@ -44,7 +44,7 @@ codec = None
 
 vocos = None
 
-text_tokenizer = PhonemeBpeTokenizer(tokenizer_path="./utils/g2p/bpe_69.json")
+text_tokenizer = PhonemeBpeTokenizer(tokenizer_path=os.path.join(os.path.dirname(__file__), "g2p/bpe_69.json"))
 text_collater = get_text_token_collater()
 
 def preload_models():
